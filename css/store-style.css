@@ -1,0 +1,21 @@
+body {
+    display: grid;
+}
+
+section {
+    width: 100%;
+}
+
+#store-cards {
+    height: 100%;
+}
+
+#store-cards .store {
+    width: 98%;
+    height: 80px;
+    border: 1px black solid;
+}
+
+.user-id {
+    border: 1px black solid !important;
+}

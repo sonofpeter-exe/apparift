@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, footer {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: white;
+}
+
+#search-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+    display: none;
+}
+
+#search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+#back-btn {
+    cursor: pointer;
+}
+
+#search-input {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+#search-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gray;
+  font-size: 16px;
+  width: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    z-index: 1;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 100%;
+}
+
+#nav-left, #nav-right {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+}
+
+#nav-right div, #nav-left div {
+    color: white;
+    position: relative;
+    boder: 1px red solid;
+    padding: 5px;
+    border: 1px white solid;
+    margin: 0 5px;
+}
+
+#logo {
+    width: 50%;
+    height: 30px;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+#promo-banner {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    paing: 5px;
+    width: 98%;
+    height: 250px;
+    font-size: 2em;
+    overflow: hidden;
+}
+
+#promo-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner-text {
+    margin: 0 auto;
+    top: -50%;
+    transform: translate(0, -50%);
+    position: relative;
+    color: white;
+}
+
+#seek {
+    position: relative;
+    margin: 5px;
+    background: seashell;
+    width: 90%;
+    height: 3em;
+}
+
+#seek input {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.categories {
+    width: 98%;
+    display: inline;
+    overflow: hidden;
+}
+
+#cat-cards {
+    position: relative;
+    pading: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h4 {
+    text-align: left;
+    padding-left: 3px;
+    width: 100%;
+}
+
+#cat-c1, #cat-c2, #cat-c3 {
+    width: 33%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.cat {
+    width: 98%;
+    height: 9em;
+    background-color: grey;
+    margin: 1px auto;
+    border: 1px black solid;
+}
+
+.cat-large {
+    height: 18.2em;
+}
+
+.cat-small {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0 1.5px;
+}
+
+.cat-jackets, .cat-vintage {
+    margin: 0;
+    padding: 0;
+}
+
+.cat-small div {
+    width: 49%;
+}
+
+.ver {
+    animation: flip 8s linear infinite;
+    transform: rotateX(0deg);
+}
+
+@keyframes flip{
+  0%{
+    transform: rotateY(0deg);
+  }
+  15%{
+    transform: rotateY(360deg);
+  }
+  100%{
+    transform: rotateY(360deg); 
+  }
+}
+
+.cat p {
+    font-size: 60%;
+    position: relative;
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#tabs {
+    position: fixed;
+    top: calc(100% - 40px);
+    background-color: white;
+    border-top: 1px whitesmoke solid;
+    width: 100%;
+    height: 40px;
+    color: black;
+    z-index: 10;
+}
+
+#tabs li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px black solid;
+}
+
+#tabs a:visited, #tabs a {
+  color: black;
+}
+
+section {
+    position: relative;
+    top: 60px;
+    overflow-y: scroll;
+}
+
+
+#padding {
+    height: 40px;
+}
+
+footer {
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    margin-top: 60px;
+    bottom: -400px;
+    background-color: grey;
+}
+
+
+@media (max-width: 767px) {
+
+    #cat-c1, #cat-c2, #cat-c3 {
+        width: 33%;
+    }
+    
+    .cat-accessories,
+    .cat-bags, .cat-jackets {
+      display: none;
+  }
+    .cat-small {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .cat-small .cat-vintage {
+      width: 100% ;
+      padding: 0;
+      margin: 0;
+  }
+  
+    #promo-banner {
+      height: 9em;
+      width: 98%;
+      font-size: 1em;
+  }
+  
+    #promo-banner img {
+      object-fit: cover;
+  }
+  
+    footer {
+      bottom: -350px;
+  }
+}
+
